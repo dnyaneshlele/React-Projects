@@ -6,7 +6,7 @@ const TaskManager = () => {
   const [tasks, setTasks] = useState([]);
   const [editingIndex, setEditingIndex] = useState(null);
 
-  // ✅ Add or Update Task
+  
   const handleCreateOrUpdateTask = () => {
     if (title.trim() && description.trim()) {
       if (editingIndex !== null) {
@@ -23,14 +23,13 @@ const TaskManager = () => {
     }
   };
 
-  // ✏️ Edit Task
+
   const handleEditTask = (index) => {
     setTitle(tasks[index].title);
     setDescription(tasks[index].description);
     setEditingIndex(index);
   };
 
-  // ❌ Delete Task
   const handleDeleteTask = (index) => {
     const isConfirmed = window.confirm("Are you sure you want to delete this task?");
     if (isConfirmed) {
@@ -87,7 +86,7 @@ const TaskManager = () => {
   );
 };
 
-// ✅ Improved Styles
+
 const styles = {
   container:
   {
